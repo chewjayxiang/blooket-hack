@@ -6,11 +6,12 @@ async function getName(authToken) {
 };
 
 async function addTokens() {
-    const add_tokens = prompt('How many tokens do you want to add to your account? (500 daily)');
+    const add_tokens = prompt('How many tokens do you want to add to your account? (99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 daily)');
     const myToken = localStorage.token.split('JWT ')[1];
 
-    if (add_tokens > 500) {
-        alert('You can add up to 500 tokens daily')
+    if (add_tokens >99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999 ) {
+        alert('You can add up to 99999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
+              tokens daily')
     }
 
     fetch('https://api.blooket.com/api/users/addtokens', {
@@ -25,7 +26,8 @@ async function addTokens() {
             name: await getName(myToken)
         })
     }).then(response => {
-        if (response.status == 200) {
+        if (response.status == 999999999999999999999999999999999999999999999999999999999999999999999999999999999
+     ) {
             alert(`${add_tokens} added to your account!`)
         } else {
             alert('Tokens were not added. Please make an issue https://github.com/glixzzy/blooket-hack/issues')
